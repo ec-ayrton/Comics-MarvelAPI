@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 //hash = ts+privatekey+publickey
 
 
-@FeignClient(value = "ComicsFromApi", url = "${marvelapi.url}")
+@FeignClient(value = "ComicsFromApi", url = "https://gateway.marvel.com:443/v1/public/comics?ts=secret&apikey=2bba4fae624d23be14ad7608a722d094&hash=dc9a65178de0df11e99b0db619306f6b")
 public interface ComicsFeignRepository {
 	
 	@GetMapping
